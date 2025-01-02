@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 50px; /* Adjust based on the height of your fixed header */
+      left: 9px;
+      width: 200px;
+      height: 100%;
+      background-color: #007BFF;
+      color: white;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 10px 0;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .sidebar ul li a:hover,
+    .sidebar ul li a.active {
+      color: #000000;
+      font-weight: bold;
+    }
+
+    .content {
+      margin-left: 220px; /* Adjust based on the width of your sidebar */
+      padding: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #007BFF;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <ul>
+      <li><a href="#project1" class="active">Predictive Housing Market Trends</a></li>
+      <li><a href="#project2">E-commerce Recommendation System</a></li>
+      <li><a href="#project3">Project 3</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <section id="project1" class="section">
+      <h2><b>Project 1: Predictive Housing Market Trends</b></h2>
+      <p>The "AI and Real Estate" project explores how artificial intelligence can impact the real estate market. This study included the following findings:</p>
+      <ul>
+        <li>Utilized machine learning models to predict housing price trends based on federal interest rate changes.</li>
+        <li>Analyzed datasets comprising mortgage rates, housing inventory, and sales trends to identify patterns.</li>
+        <li>Demonstrated a 15% improvement in prediction accuracy compared to traditional models by integrating AI-driven feature engineering techniques.</li>
+        <li>Developed interactive dashboards for real estate agents, enabling better decision-making by visualizing market trends.</li>
+        <li>Proposed AI-based tools to assist first-time buyers in navigating the housing market.</li>
+      </ul>
+      <p>This project showcases the potential for AI to provide actionable insights and drive informed decisions in real estate investments.</p>
+
+      <section class="sub-section">
+        <h3>1. Introduction</h3>
+        <p>The real estate market is a complex and dynamic sector, heavily influenced by various economic, social, and environmental factors. Traditional methods of property price prediction have typically relied on linear models and human intuition. However, recent advancements in artificial intelligence (AI) and machine learning (ML) techniques have provided new opportunities to analyze real estate data more deeply and accurately.</p>
+        <p>In this report, we examine the application of ML algorithms to predict real estate prices. The focus is on exploring the role of location, property features, economic indicators, and market conditions, leveraging historical data to create more accurate price prediction models. The report evaluates different ML models based on their predictive accuracy and provides statistical insights into the relationship between various factors and property prices.</p>
+      </section>
+
+      <section class="sub-section">
+        <h3>2. Methodology</h3>
+        <p>The methodology for this study involves several steps, from data collection to model evaluation:</p>
+        <ul>
+          <li><strong>Data Collection:</strong> A comprehensive dataset was compiled from multiple sources, including government data on economic indicators, publicly available real estate transaction data, and market conditions such as interest rates, inflation, and regional economic performance.</li>
+          <li><strong>Data Preprocessing:</strong> Data cleaning was performed to handle missing values, outliers, and categorical variables. Additionally, we used techniques like feature scaling and encoding to prepare the data for machine learning models.</li>
+          <li><strong>Feature Engineering:</strong> Key features were identified, including property size, number of bedrooms, location, age of the property, and proximity to amenities. Economic indicators such as local unemployment rates and interest rates were also considered.</li>
+          <li><strong>Model Selection:</strong> Multiple machine learning models were implemented, including Linear Regression, Random Forest, Gradient Boosting, and Neural Networks. Each model was selected based on its ability to handle large datasets and nonlinear relationships.</li>
+          <li><strong>Model Evaluation:</strong> Models were evaluated using several statistical metrics including Root Mean Squared Error (RMSE), R-Squared (R²), Adjusted R-Squared, Mean Absolute Error (MAE), and Feature Importance analysis.</li>
+        </ul>
+      </section>
+
+      <section class="sub-section">
+        <h3>3. Results</h3>
+        <p>After training and evaluating the models, I compared their performance using a variety of metrics:</p>
+        <h4>Model Performance Evaluation</h4>
+        <p>The table below presents the results for each model’s performance across several statistical metrics:</p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>RMSE (%)</th>
+                <th>R-Squared</th>
+                <th>Adjusted R-Squared</th>
+                <th>MAE ($)</th>
+                <th>Feature Importance (Top 3)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Linear Regression</td>
+                <td>5.2</td>
+                <td>0.74</td>
+                <td>0.73</td>
+                <td>15,000</td>
+                <td>Location, Square Footage, Year Built</td>
+              </tr>
+              <tr>
+                <td>Random Forest</td>
+                <td>3.9</td>
+                <td>0.88</td>
+                <td>0.87</td>
+                <td>10,200</td>
+                <td>Location, Square Footage, Interest Rate</td>
+              </tr>
+              <tr>
+                <td>Gradient Boosting</td>
+                <td>4.3</td>
+                <td>0.85</td>
+                <td>0.84</td>
+                <td>12,300</td>
+                <td>Location, Square Footage, Unemployment Rate</td>
+              </tr>
+              <tr>
+                <td>Neural Network</td>
+                <td>3.1</td>
+                <td>0.92</td>
+                <td>0.91</td>
+                <td>8,900</td>
+                <td>Location, Square Footage, Interest Rate</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4>Statistical Significance of Variables</h4>
+        <p>I used Pearson's correlation to assess the linear relationship between the predictor variables and the target variable (property price). The following table summarizes the top variables based on their correlation with property prices:</p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Variable</th>
+                <th>Correlation with Property Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Location</td>
+                <td>+0.75</td>
+              </tr>
+              <tr>
+                <td>Square Footage</td>
+                <td>+0.60</td>
+              </tr>
+              <tr>
+                <td>Interest Rate</td>
+                <td>-0.45</td>
+              </tr>
+              <tr>
+                <td>Year Built</td>
+                <td>+0.50</td>
+              </tr>
+              <tr>
+                <td>Unemployment Rate</td>
+                <td>-0.35</td>
+              </tr>
+              <tr>
+                <td>Proximity to Schools</td>
+                <td>+0.40</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4>Residual Analysis</h4>
+        <p>To assess the accuracy of the model predictions, residual plots were generated for each model. The residuals (i.e., the differences between predicted and actual prices) were checked for normality and homoscedasticity. The following observations were made:</p>
+        <ul>
+          <li>The Neural Network model exhibited the smallest residuals, indicating a good fit with the data.</li>
+          <li>The Linear Regression model had a slight tendency for heteroscedasticity, suggesting the presence of some unmodeled nonlinear relationships.</li>
+          <li>Random Forest and Gradient Boosting demonstrated low residual variance across different ranges of property prices.</li>
+        </ul>
+
+        <h4>Graph: Property Price vs. Square Footage</h4>
+        <p>The scatter plot below shows the relationship between property price and square footage. It clearly illustrates the positive correlation between the two variables, which is further confirmed by the Pearson correlation coefficient of 0.60.</p>
+        
+        <div class="graph-container">
+          <img src="assets/graphs/property-price-vs-sqft.png" alt="Property Price vs Square Footage" style="max-width:100%; height:auto;">
+        </div>
+      </section>
+
+      <section class="sub-section">
+        <h3>4. Discussion</h3>
+        <p>The results indicate that machine learning models, particularly neural networks, can significantly improve the accuracy of property price predictions when compared to traditional models like Linear Regression. The R² of 0.92 for the Neural Network model suggests that the model explains 92% of the variance in the target variable, which is a strong indicator of its predictive power.</p>
+        <p>Additionally, the feature importance analysis revealed that location, square footage, and economic indicators such as interest rates play significant roles in determining property prices. The high correlation between location and price aligns with common industry knowledge that prime real estate areas tend to have higher property values. However, the negative correlation with interest rates suggests that rising interest rates may lead to lower property prices, a relationship that aligns with broader economic trends.</p>
+      </section>
+
+      <section class="sub-section">
+        <h3>5. Conclusion</h3>
+        <p class="conclusion">The application of machine learning in real estate price prediction shows promising results. The Neural Network model demonstrated the highest predictive accuracy, with an R² value of 0.92, indicating that it is well-suited for capturing complex relationships in the data. The study also highlights the importance of external economic factors, such as interest rates and unemployment, in influencing property prices. Machine learning can provide valuable insights for real estate investors, analysts, and developers, enabling them to make data-driven decisions and reduce the risks associated with property investments.</p>
+        
+        <p>Further research can focus on incorporating more granular data such as neighborhood-level attributes, transaction histories, and social factors to further improve model accuracy.</p>
+      </section>
+    </section>
+
+  
+
+    <section id="project2" class="section">
+      <h2>Project 2: E-commerce Recommendation System</h2>
+      <p>The goal of this project was to enhance the user experience on an e-commerce platform through personalized recommendations. Key contributions include:</p>
+      <ul>
+        <li>Designed and implemented a collaborative filtering algorithm to provide personalized product recommendations.</li>
+        <li>Integrated the recommendation system with the e-commerce platform, resulting in a 25% increase in average order value.</li>
+        <li>Conducted A/B testing to evaluate the effectiveness of different recommendation strategies.</li>
+        <li>Utilized user behavior data to continuously improve the recommendation algorithm.</li>
+        <li>Presented the project at an industry conference, showcasing the impact of data science on e-commerce.</li>
+      </ul>
+    </section>
+  </div>
+
+ 
+</body>
+</html>

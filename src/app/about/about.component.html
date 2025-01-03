@@ -3,7 +3,9 @@
 body {
   font-family: 'Arial', sans-serif;
   color: #333;
-  background-color: #f4f4f4;
+  background-color: #e9ecef;
+  margin: 0;
+  padding: 0;
 }
 
 .intro-section {
@@ -15,61 +17,75 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
   border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .intro-text {
-  max-width: 70%;
+  max-width: 60%;
   font-family: 'Courier New', Courier, monospace;
 }
 
 .intro-text h1 {
   font-size: 2.5em;
-  color: #007BFF;
+  color: #17a2b8;
   font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .intro-text p {
   font-size: 1.2em;
   line-height: 1.6;
   color: #555;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .contact-button {
-  background-color: #007BFF;
+  background-color: #17a2b8;
   color: #fff;
   border: none;
   padding: 10px 20px;
   font-size: 1em;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .contact-button:hover {
-  background-color: #0056b3;
+  background-color: #138496;
+  transform: scale(1.05);
 }
 
 .intro-image img {
-  width: 400px;
-  object-fit:cover;
-  height: 400px;
-  border-radius: 100%;
-  size: 100px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 200%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out;
+  margin-top: 0px;
+  margin-left: 200px; /* Move the image to the left */
+  width: 290px;
+  height: 390px;
 }
 
 .contact-info {
   margin-top: 20px;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #f8f9fa;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2.5s ease-in-out;
 }
 
 .contact-info h2 {
   font-size: 1.5em;
-  color: #007BFF;
+  color: #17a2b8;
 }
 
 .contact-info p {
@@ -78,7 +94,7 @@ body {
 }
 
 .contact-info a {
-  color: #007BFF;
+  color: #17a2b8;
   text-decoration: none;
 }
 
@@ -106,6 +122,7 @@ body {
   border: 1px solid #888;
   width: 40%;
   border-radius: 10px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .close {
@@ -126,6 +143,16 @@ body {
   display: block;
 }
 
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .intro-section {
@@ -134,11 +161,11 @@ body {
   }
 
   .intro-image {
-    margin-top: 20px;
+    padding-bottom:  200px;
   }
 
   .intro-text {
-    max-width: 100%;
+    max-width: 140%;
   }
 }
 </style>
@@ -156,87 +183,81 @@ body {
     <button class="contact-button" (click)="openModal()">Get in Touch</button>
   </div>
   <div class="intro-image">
-    <img src="/IMG_4253.jpg" alt="Profile Picture" />
+    <img src="/IMG_1512.jpg" alt="Profile Picture" />
   </div>
 </div>
   
- <!-- Skills Section -->
+<!-- Skills Section -->
 
+<!-- Contact Information Section -->
+<div class="contact-info" style="flex: 1; font-family: Arial, sans-serif;">
   <!-- Contact Information Section -->
-  <div class="contact-info" style="flex: 1; font-family: Arial, sans-serif;">
-    <!-- Contact Information Section -->
-    <h2 style="font-size: 2em; color: #007BFF; margin-bottom: 20px;">Key Skills</h2>
-    
-    <!-- General Technical Skills Section -->
-    <div style="margin-bottom: 40px;">
-      <h3 style="font-size: 1.6em; color: #333; margin-bottom: 10px;">General Technical Skills</h3>
-      <div style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 1.1em; color: #555;">
-        <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
-          <b>Machine Learning:</b>  Random Forest, SVM, KNN, ARIMA
-        </div>
-        <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
-           <b>Data Analytics: </b>Python, SQL, PySpark, Git, R, Stata, DataRobot API
-        </div>
-        <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
-          <b> Data Visualization:</b> Qlik Sense, Tableau, Pandas
-        </div>
-        
+  <h2 style="font-size: 2em; color: #17a2b8; margin-bottom: 20px;">Key Skills</h2>
+  
+  <!-- General Technical Skills Section -->
+  <div style="margin-bottom: 40px;">
+    <h3 style="font-size: 1.6em; color: #333; margin-bottom: 10px;">General Technical Skills</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 1.1em; color: #555;">
+      <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+        <b>Machine Learning:</b>  Random Forest, SVM, KNN, ARIMA
+      </div>
+      <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+         <b>Data Analytics: </b>Python, SQL, PySpark, Git, R, Stata, DataRobot API
+      </div>
+      <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+        <b> Data Visualization:</b> Qlik Sense, Tableau, Pandas
+      </div>
+      
+    </div>
+  </div>
+  
+  <!-- Cloud Platforms Section -->
+  <div style="margin-bottom: 40px;">
+    <h3 style="font-size: 1.6em; color: #333; margin-bottom: 10px;">Cloud Platforms</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 1.1em; color: #555;">
+      <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+         Google Cloud Platform (GCP)
+      </div>
+      <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+         Amazon Web Services (AWS)
       </div>
     </div>
-    
-    <!-- Cloud Platforms Section -->
-    <div style="margin-bottom: 40px;">
-      <h3 style="font-size: 1.6em; color: #333; margin-bottom: 10px;">Cloud Platforms</h3>
-      <div style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 1.1em; color: #555;">
-        <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
-           Google Cloud Platform (GCP)
-        </div>
-        <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
-           Amazon Web Services (AWS)
-        </div>
+  </div>
+  
+  <!-- Data Engineering Tools & Technologies Section -->
+  <div style="margin-bottom: 40px;">
+    <h3 style="font-size: 1.6em; color: #333; margin-bottom: 10px;">Data Engineering Tools & Warehouses</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 1.1em; color: #555;">
+      <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+         Databricks
       </div>
-    </div>
-    
-    <!-- Data Engineering Tools & Technologies Section -->
-    <div style="margin-bottom: 40px;">
-      <h3 style="font-size: 1.6em; color: #333; margin-bottom: 10px;">Data Engineering Tools & Warehouses</h3>
-      <div style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 1.1em; color: #555;">
-        <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
-           Databricks
-        </div>
-        <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
-           Informatica
-        </div>
-        <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
-           Apache Spark
-        </div>
-        <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
-           Delta Lake
-        </div>
-        <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
-           ETL
-        </div>
-        <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+      <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+         Informatica
+      </div>
+      <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+         Apache Spark
+      </div>
+      <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+         Delta Lake
+      </div>
+      <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+         ETL
+      </div>
+      <div style="flex: 1 1 45%; background-color: #f8f8f8; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
         Docker
-       </div>
       </div>
     </div>
-  
-    <!-- Programming Languages Section -->
-    
-  
-  <div class="contact-info" style="flex: 1;">
-    <h2 style="font-size: 1.8em; color: #007BFF;">Contact Information</h2>
-    <p style="font-size: 1.2em; color: #555;">Email: <a href="mailto:kkaufma72@gmail.com">kkaufma72&#64;gmail.com</a></p>
-    <p style="font-size: 1.2em; color: #555;">Phone: <a href="tel:+17349455898">734-945-5898</a></p>
-    <p style="font-size: 1.2em; color: #555;">GitHub: <a href="https://github.com/kkaufma72" target="_blank">kkaufma72&#64;github.com</a></p>
   </div>
 
-  <!-- Key Skills Section -->
   
+</div>
 
-  <!-- Key Skills Section -->
-  
+<div class="contact-info" style="flex: 1;">
+  <h2 style="font-size: 1.8em; color: #17a2b8;">Contact Information</h2>
+  <p style="font-size: 1.2em; color: #555;">Email: <a href="mailto:kkaufma72@gmail.com">kkaufma72&#64;gmail.com</a></p>
+  <p style="font-size: 1.2em; color: #555;">Phone: <a href="tel:+17349455898">734-945-5898</a></p>
+  <p style="font-size: 1.2em; color: #555;">GitHub: <a href="https://github.com/kkaufma72" target="_blank">kkaufma72&#64;github.com</a></p>
+</div>
 
 <!-- Modal Section -->
 <div id="myModal" class="modal" [ngClass]="{'show': isModalOpen}">
@@ -244,9 +265,9 @@ body {
     <span class="close" (click)="closeModal()">&times;</span>
     <h2>Contact Me</h2>
     <form>
-      <textarea id="message" name="message" rows="4" cols="50"></textarea>
+      <textarea id="message" name="message" rows="4" cols="50" placeholder="Your message..."></textarea>
       <br> <br>
-      <button type="submit">Send</button>
+      <button type="submit" class="contact-button">Send</button>
       <br>
     </form>
   </div>

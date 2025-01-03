@@ -64,15 +64,21 @@
 <body>
   <div class="sidebar">
     <ul>
-      <li><a href="#project1" class="active">Predictive Housing Market Trends</a></li>
-      <li><a href="#project2">E-commerce Recommendation System</a></li>
-      <li><a href="#project3">Project 3</a></li>
+      <li><a href="#project1" [class.active]="activeProject === 'project1'" (click)="setActiveProject('project1')">Predictive Housing Market Trends</a></li>
+      <li><a href="#project2" [class.active]="activeProject === 'project2'" (click)="setActiveProject('project2')">Real Estate Investment Analysis Tool</a></li>
+      <li><a href="#project3" [class.active]="activeProject === 'project3'" (click)="setActiveProject('project3')">Financial Stress Index Dashboard</a></li>
     </ul>
   </div>
 
   <div class="content">
     <section id="project1" class="section">
-      <h2><b>Project 1: Predictive Housing Market Trends</b></h2>
+      <a href="https://predictionshousingmarket-f4dzhnmmjwnajc6pevhnrd.streamlit.app" target="_blank">
+        <h2>Project 1: Predicting Housing Market Trends</h2>
+      </a>
+      <p>Link to <a href="https://predictionshousingmarket-f4dzhnmmjwnajc6pevhnrd.streamlit.app" target="_blank">Project</a></p>
+
+      <p>Link to <a href="https://github.com/kkaufma72" target="_blank">GitHub</a></p>
+
       <p>The "AI and Real Estate" project explores how artificial intelligence can impact the real estate market. This study included the following findings:</p>
       <ul>
         <li>Utilized machine learning models to predict housing price trends based on federal interest rate changes.</li>
@@ -208,9 +214,17 @@
         <p>The scatter plot below shows the relationship between property price and square footage. It clearly illustrates the positive correlation between the two variables, which is further confirmed by the Pearson correlation coefficient of 0.60.</p>
         
         <div class="graph-container">
-          <img src="assets/graphs/property-price-vs-sqft.png" alt="Property Price vs Square Footage" style="max-width:100%; height:auto;">
+          <img src="enhanced_housing_trends_visuals.png" alt="Property Price vs Square Footage" style="max-width:100%; height:auto;">
+          <figure>
+            <img src="Figure_1.png" alt="Residual Distribution" width="600" />
+            <figcaption>Residual Distribution</figcaption>
+          </figure>
         </div>
-      </section>
+        
+        <h3>Key Insights</h3>
+        <p>- Neural Network outperforms other models with an R-Squared of 0.92.</p>
+        <p>- Location and economic factors such as interest rates heavily influence property prices.</p>
+        
 
       <section class="sub-section">
         <h3>4. Discussion</h3>
@@ -226,21 +240,68 @@
       </section>
     </section>
 
-  
-
-    <section id="project2" class="section">
-      <h2>Project 2: E-commerce Recommendation System</h2>
-      <p>The goal of this project was to enhance the user experience on an e-commerce platform through personalized recommendations. Key contributions include:</p>
-      <ul>
-        <li>Designed and implemented a collaborative filtering algorithm to provide personalized product recommendations.</li>
-        <li>Integrated the recommendation system with the e-commerce platform, resulting in a 25% increase in average order value.</li>
-        <li>Conducted A/B testing to evaluate the effectiveness of different recommendation strategies.</li>
-        <li>Utilized user behavior data to continuously improve the recommendation algorithm.</li>
-        <li>Presented the project at an industry conference, showcasing the impact of data science on e-commerce.</li>
-      </ul>
-    </section>
-  </div>
+   
+<section id="project2" class="section">
+  <a href="https://propertyinvestmentanalysis.streamlit.app/?utm_medium=oembed" target="_blank">
+    <h2>Project 2: Real Estate Investment Analysis Tool</h2>
+  </a>  <p>The goal of this project was to provide detailed financial insights for real estate investments, enabling informed decision-making for property owners and investors. Key contributions include:</p>
+  <ul>
+    <li>Developed an interactive Streamlit app to analyze cash flow, equity growth, and ROI for both primary and investment properties.</li>
+    <li>Designed predictive models to simulate scenarios like refinancing, PMI removal, and additional principal payments over 30 years.</li>
+    <li>Created dynamic visualizations using Plotly to illustrate cash flow trends, equity buildup, and property appreciation.</li>
+    <li>Implemented user inputs for customizable analysis, including property values, interest rates, rental income, and loan terms.</li>
+    <li>Hosted the application on Streamlit Cloud, ensuring accessibility and real-time analysis for users.</li>
+    <li>Demonstrated the impact of strategic financial decisions through sensitivity analysis and interactive dashboards.</li>
+  </ul>
+  <p>Check out the project on <a href="https://github.com/kkaufma72/investmentanalysis" target="_blank">GitHub</a>.</p>
+</section>
+<iframe
+    src="https://propertyinvestmentanalysis.streamlit.app/?embed=True"  width="100%"
+  height="800px"
+  frameborder="0"
+  sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+></iframe>
 
  
-</body>
-</html>
+<section id="project3" class="section">
+  <a href="https://financeindexmain.streamlit.app/?embed=True" target="_blank">
+    <h2>Project 3: Enhanced Financial Stress Index Dashboard</h2>
+  </a>
+  <p>The goal of this project was to develop an advanced dashboard that analyzes financial stress levels using real-time and predictive analytics. This project demonstrates the ability to combine interactive user experiences with advanced machine learning algorithms. Key contributions include:</p>
+  <ul>
+    <li>Integrated real-time economic indicators such as unemployment rates, inflation, and market indices from external APIs.</li>
+    <li>Developed a Financial Stress Index (FSI) using user-defined weights and MinMax normalization techniques to make metrics comparable.</li>
+    <li>Incorporated predictive analytics with linear regression to forecast future FSI values, providing foresight into potential economic trends.</li>
+    <li>Created dynamic visualizations using Plotly to display real-time data trends, FSI over time, and future predictions.</li>
+    <li>Included a correlation matrix to identify relationships between economic indicators and financial stress levels.</li>
+    <li>Enhanced user experience with customizable weighting factors for a personalized analysis of stress contributors.</li>
+  </ul>
+  
+  <h3>Key Features</h3>
+  <p>This dashboard empowers users to:</p>
+  <ul>
+    <li>Adjust the weights of economic indicators to see their impact on the Financial Stress Index.</li>
+    <li>Analyze trends in unemployment, inflation, and market indices through interactive visuals.</li>
+    <li>Predict financial stress levels for upcoming months based on historical patterns.</li>
+    <li>Gain insights into how economic indicators correlate with financial stress levels.</li>
+  </ul>
+  
+  <h3>Dynamic Visualizations</h3>
+  <div class="visual-container">
+    <figure>
+      <img src="fsi_over_time.png" alt="Financial Stress Index Over Time" width="600" />
+      <figcaption>Financial Stress Index Over Time</figcaption>
+    </figure>
+    <figure>
+      <img src="fsi_prediction.png" alt="Predicted Financial Stress Index" width="600" />
+      <figcaption>Predicted Financial Stress Index</figcaption>
+    </figure>
+    <figure>
+      <img src="indicator_trends.png" alt="Economic Indicator Trends" width="600" />
+      <figcaption>Economic Indicator Trends</figcaption>
+    </figure>
+    
+  </div>
+  
+  <p>Check out the project on <a href="https://github.com/kkaufma72/financialindexmain" target="_blank">GitHub</a> or <a href="https://financeindexmain.streamlit.app/" target="_blank">live on Streamlit Cloud</a>.</p>
+</section>

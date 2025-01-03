@@ -2,10 +2,13 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-projects',
-  imports: [],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css'
+  styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent {
+  activeProject: string = 'project1';
 
+  setActiveProject(project: string) {
+    this.activeProject = project;
+  }
 }
